@@ -1,0 +1,10 @@
+.container {
+	padding: var(--container-min-padding);
+	min-width: 100%;
+	@media (min-width: 724px) {
+		padding: var(--container-max-padding);
+	}
+}
+.app-column {
+	max-width: var(--app-max-width);
+}

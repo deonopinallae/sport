@@ -1,0 +1,52 @@
+@use 'tailwindcss';
+@use './vars';
+@use './globals';
+
+*,
+*::after,
+*::before,
+html {
+	box-sizing: border-box;
+}
+body,
+#root {
+	height: 100vh;
+}
+body {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--font-color-main);
+	background-color: var(--bg-color);
+	line-height: 100%;
+}
+section {
+	height: 100%;
+}
+h1 {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 130%;
+}
+h2 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 130%;
+}
+a {
+	text-decoration: none;
+}
+input {
+	font-family: inherit;
+	outline: none;
+}
+button {
+	font-family: inherit;
+	white-space: nowrap;
+	cursor: pointer;
+}
+li {
+	list-style: none;
+}
+img {
+	width: 100%;
+}
