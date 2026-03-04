@@ -2,6 +2,7 @@
 @use './vars';
 @use './globals';
 
+
 *,
 *::after,
 *::before,
@@ -12,26 +13,38 @@ body,
 #root {
 	height: 100vh;
 }
+html {
+	font-size: 16px;
+}
 body {
+	font-family: var(--font-family-main);
 	font-size: 16px;
 	font-weight: 400;
-	color: var(--font-color-main);
-	background-color: var(--bg-color);
-	line-height: 100%;
+	color: var(--font-main-color);
+	background-color: var(--app-bg-color);
+	line-height: 130%;
 }
 section {
 	height: 100%;
 }
 h1 {
-	font-size: 32px;
-	font-weight: 600;
-	line-height: 130%;
+	font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+	font-weight: 700;
+	line-height: 110%;
+	letter-spacing: 0.01em;
 }
 h2 {
-	font-size: 24px;
-	font-weight: 600;
-	line-height: 130%;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 110%;
+	letter-spacing: 0.015rem;
+
+	@media (min-width: 48rem) {
+		font-size: 2.5rem;
+		letter-spacing: 0.025rem;
+	}
 }
+
 a {
 	text-decoration: none;
 }

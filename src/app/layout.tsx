@@ -1,9 +1,16 @@
 import type { Metadata } from 'next'
-import { Lexend_Deca } from 'next/font/google'
+import { Montserrat, Raleway } from 'next/font/google'
 import '@/styles/styles.scss'
+import { Header } from '@/shared/ui/layout/header/header'
 
-const lexendDeca = Lexend_Deca({
+const montserrat = Montserrat({
 	subsets: ['latin'],
+	variable: '--font-montserrat',
+})
+
+const raleway = Raleway({
+	subsets: ['latin'],
+	variable: '--font-raleway',
 })
 
 export const metadata: Metadata = {
@@ -18,7 +25,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${lexendDeca.className} antialiased`}>{children}</body>
+			<body
+				className={`${montserrat.className} ${montserrat.variable} ${raleway.variable} antialiased`}
+			>
+				<Header />
+				{children}
+			</body>
 		</html>
 	)
 }

@@ -17,28 +17,31 @@ export const Header = ({
 	isDanger = false,
 	className,
 }: HeaderProps) => {
-	const timerColor = isDanger ? 'text-[#FD5656]' : 'text-[#FFBB00]'
+	const timerColor = isDanger
+		? 'text-[var(--header-timer-danger-color)]'
+		: 'text-[var(--header-timer-color)]'
 
 	return (
 		<header
-			className={`sticky top-0 z-50 flex w-full flex-col items-center gap-1 bg-[#1D5B43] px-4 py-2 ${className ?? ''}`}
+			className={`sticky top-0 z-50 flex w-full flex-col items-center gap-[0.25rem] bg-[var(--header-bg-color)] px-[1rem] py-[0.5rem] text-[var(--header-font-color)] ${className ?? ''}`}
 		>
-			<p className="text-center text-[18px] font-semibold leading-[1.3] text-white md:text-[24px]">
+			<p className="text-center text-[1.125rem] font-semibold leading-[1.3] md:text-[1.5rem]">
 				Успейте открыть пробную неделю
 			</p>
 
-			<div className={`flex items-center justify-center gap-2 ${timerColor}`}>
-				<StarIcon className="h-[14px] w-[14px]" />
+			<div
+				className={`flex items-center justify-center gap-[0.5rem] ${timerColor}`}
+			>
+				<StarIcon className="h-[0.875rem] w-[0.875rem]" />
 
-				<div className="flex items-center gap-[6px] text-[32px] font-bold uppercase leading-none md:text-[40px]">
+				<div className="flex items-center gap-[0.375rem] text-[2rem] font-bold uppercase leading-none md:text-[2.5rem]">
 					<span className="leading-[1.1]">{pad(minutes)}</span>
 					<span className="leading-[1.3]">:</span>
 					<span className="leading-[1.1]">{pad(seconds)}</span>
 				</div>
 
-				<StarIcon className="h-[14px] w-[14px]" />
+				<StarIcon className="h-[0.875rem] w-[0.875rem]" />
 			</div>
 		</header>
 	)
 }
-

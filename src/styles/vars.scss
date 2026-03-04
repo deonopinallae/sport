@@ -1,13 +1,29 @@
 //app
 :root {
-	--app-max-width: 1923px;
-	--app-bg-color: #ffffff;
-	--container-min-padding: 0 1.38rem;
-	--container-max-padding: 0 3.38rem;
+	--app-max-width: 1900px;
+	--app-bg-color: #232829;
+	--container-min-padding: 0 1rem;
+	--container-max-padding: 0 22rem;
 }
 
 //fonts
 :root {
-	--font-family-main: 'Lexend Deca', sans-serif;
-	--font-color-main: #000000;
+	--font-family-main: var(--font-montserrat), sans-serif;
+	--font-family-accent: var(--font-raleway), sans-serif;
+	--font-main-color: #ffffff;
+}
+
+//header
+:root {
+	--header-bg-color: #1d5b43;
+	--header-timer-color: #ffbb00;
+	--header-timer-danger-color: #fd5656;
+}
+
+//rate page
+:root {
+	--rate-font-subtle-color: #9b9b9b;
+	--rate-accent-color: #fdb056;
+	--rate-success-color: #81fe95;
+	--rate-danger-color: #fd5656;
 }
