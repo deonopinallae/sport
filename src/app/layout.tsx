@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat, Raleway } from 'next/font/google'
-import '@/styles/styles.scss'
+import '@/styles/global.scss'
 import { OfferTimer } from '@/features/offer-timer/ui/offer-timer'
 
 const montserrat = Montserrat({

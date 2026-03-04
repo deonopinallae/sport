@@ -1,7 +1,5 @@
 @use 'tailwindcss';
 @use './vars';
-@use './globals';
-
 
 *,
 *::after,
@@ -62,4 +60,11 @@ li {
 }
 img {
 	width: 100%;
+}
+.container {
+	min-width: 100%;
+	padding: var(--container-min-padding);
+	@media (min-width: 120rem) {
+		padding: var(--container-max-padding);
+	}
 }
