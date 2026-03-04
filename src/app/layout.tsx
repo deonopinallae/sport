@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat, Raleway } from 'next/font/google'
 import '@/styles/styles.scss'
-import { Header } from '@/shared/ui/layout/header/header'
+import { OfferTimer } from '@/features/offer-timer/ui/offer-timer'
 
 const montserrat = Montserrat({
 	subsets: ['latin'],
@@ -28,7 +28,7 @@ export default function RootLayout({
 			<body
 				className={`${montserrat.className} ${montserrat.variable} ${raleway.variable} antialiased`}
 			>
-				<Header />
+				<OfferTimer />
 				{children}
 			</body>
 		</html>
