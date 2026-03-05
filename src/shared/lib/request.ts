@@ -7,7 +7,12 @@ export const request = async <T, D = undefined>(
 	method: HttpMethod = 'GET',
 	data?: D,
 ): Promise<T> => {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}${url}`, {
+	const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? ''
+
+	const targetUrl =
+		url.startsWith('http://') || url.startsWith('https://') ? url : `${baseUrl}${url}`
+
+	const res = await fetch(targetUrl, {
 		method,
 		headers: {
 			'Content-Type': 'application/json',
