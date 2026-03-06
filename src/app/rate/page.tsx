@@ -22,13 +22,11 @@ export default function RatePage() {
 	}, [])
 
 	return (
-		<section className="container my-[clamp(2rem,2.5vw,3rem)] md:px-[3.25rem] md:pt-[2.75rem]">
-			<div className="mx-auto w-full max-w-[76rem] lg:ml-[26.5rem] lg:max-w-[46.75rem]">
-				<h2 className="inline">Выбери подходящий для себя </h2>
-				<h2 className="inline text-[var(--rate-accent-color)]">тариф</h2>
-			</div>
+		<section className="container mx-auto my-[clamp(2rem,2.5vw,3rem)] md:px-[3.25rem] md:pt-[2.75rem]">
+			<h2 className="inline">Выбери подходящий для себя </h2>
+			<h2 className="inline text-[var(--rate-accent-color)]">тариф</h2>
 
-			<div className="mx-auto mt-[clamp(1.5rem,2vw,2.0625rem)] flex w-full max-w-[76rem] flex-col gap-[clamp(1rem,2vw,2rem)] lg:flex-row lg:items-end lg:gap-[5.5rem]">
+			<div className="mx-auto mt-[clamp(1.5rem,2vw,2.0625rem)] flex max-w-[76rem] flex-col gap-[clamp(1rem,2vw,2rem)] lg:flex-row lg:items-end lg:gap-[5.5rem]">
 				<div className="relative mx-auto w-[6.206rem] min-[375px]:w-[7.756rem] lg:mx-0 lg:w-[23.795rem]">
 					<img src={athleteImageUrl} alt="Атлет" className="w-full" />
 				</div>
