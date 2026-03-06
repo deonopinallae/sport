@@ -9,7 +9,7 @@ import type { TariffDto } from '@/entities/price-card/model/price-card-types'
 import { useOfferTimerStore } from '@/features/offer-timer/model/offer-timer-store'
 import { Loader } from '@/shared/ui/loader'
 
-const athleteImageUrl = '/freepik-export-20240531103402atHS%2012.png'
+const athleteImageUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}/freepik-export-20240531103402atHS%2012.png`
 
 export default function RatePage() {
 	const [tariffs, setTariffs] = useState<TariffDto[]>([])
