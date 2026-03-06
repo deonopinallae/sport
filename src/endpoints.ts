@@ -1,3 +1,3 @@
 export const ENDPOINTS = {
-	getTariffs: '/api/tariffs',
+	getTariffs: 'https://t-core.fit-hub.pro/Test/GetTariffs',
 }
